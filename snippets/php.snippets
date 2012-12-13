@@ -1,3 +1,49 @@
+snippet jquery 
+	<script type="text/javascript">
+	    $(document).ready(function(){
+		    ${1}
+		});
+	</script>
+snippet valid 
+	$('#form').validate({
+	    errorPlacement: function(error,element) {
+		    element.next('span').after(error);
+	    },
+		onkeyup: false,
+		rules: {
+		    ${1} : {
+			    required: true
+			}
+	    },
+		messages: {
+		    ${1} : {
+			    required: 'not null'
+		    }
+	    }
+	});
+snippet blank 
+	target="_blank"
+snippet ncforeach 
+	<?php if(!empty($output['list']) && is_array($output['list'])) {?>
+	<?php foreach($output['list'] as $key=>$val) {?>
+snippet dump 
+	var_dump(${1});die;
+snippet lang 
+	<?php echo $lang['${1:string}'];?>
+snippet colon 
+	<?php echo $lang['nc_colon'];?>
+snippet echo 
+	<?php echo ${1:string};?>
+snippet rmb 
+	<?php echo $lang['currency'];?>
+snippet Lang
+	Language::get('${1:string}')
+snippet showe 
+	showMessage(Language::get('${1:string}'),'${2}','','error');
+snippet showm 
+	showMessage(Language::get('${1:string}'),'${2}');
+snippet show 
+	showMessage('${1:string}','${2}');
 snippet <?
 	<?php
 
