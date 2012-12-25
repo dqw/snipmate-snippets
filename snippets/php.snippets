@@ -25,10 +25,13 @@ snippet blank
 	target="_blank"
 snippet ncforeach 
 	<?php if(!empty($output['list']) && is_array($output['list'])) {?>
-	<?php foreach($output['list'] as $key=>$val) {?>
+	<?php foreach($output['list'] as $key=>$value) {?>
+	${1}
+	<?php } ?>
+	<?php } ?>
 snippet dump 
 	var_dump(${1});die;
-snippet lang 
+snippet nlang 
 	<?php echo $lang['${1:string}'];?>
 snippet colon 
 	<?php echo $lang['nc_colon'];?>
